@@ -1,3 +1,14 @@
 {
-    "nuxt.isNuxtApp": false
+    "nuxt.isNuxtApp": false,
+    "prettier.enable": false,
+    "editor.formatOnSave": false,
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    "stylelint.enable": true,
+    "stylelint.validate": [
+        "css",
+        "vue",
+        "html"
+    ]
 }

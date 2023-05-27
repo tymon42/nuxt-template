@@ -6,12 +6,43 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint-staged": "lint-staged"
   },
   "devDependencies": {
+    "@antfu/eslint-config": "^0.39.3",
+    "@commitlint/cli": "^17.6.3",
+    "@commitlint/config-conventional": "^17.6.3",
     "@nuxt/devtools": "^0.5.5",
     "@nuxthq/ui": "^2.2.0",
     "@types/node": "^18",
-    "nuxt": "^3.5.1"
+    "commitizen": "^4.3.0",
+    "cz-git": "^1.6.1",
+    "eslint": "^8.41.0",
+    "lint-staged": "^13.2.2",
+    "nuxt": "^3.5.1",
+    "postcss-html": "^1.5.0",
+    "stylelint": "^15.6.2",
+    "stylelint-config-html": "^1.1.0",
+    "stylelint-config-recess-order": "^4.0.0",
+    "stylelint-config-standard": "^33.0.0",
+    "typescript": "^5.0.4"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,jsx}": [
+      "eslint --fix --ext"
+    ],
+    "*.vue": [
+      "eslint --fix --ext",
+      "stylelint --cache --fix"
+    ],
+    "*.{css,html}": [
+      "stylelint --cache --fix"
+    ]
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git"
+    }
   }
 }
