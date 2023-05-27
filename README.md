@@ -1,4 +1,4 @@
-# Nuxt 3 Template
+# Nuxt3 Nuxtlab-UI Template
 
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
@@ -8,6 +8,8 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 - [color-mode](color-mode.nuxtjs.org)
 - Auto-Dark Mode powered by [color-mode](color-mode.nuxtjs.org) imported by Nuxtlab-UI
 
+You can easily add more modules to project by using the Nuxt DevTools.
+
 ## Setup
 
 Make sure to install the dependencies:
@@ -15,9 +17,8 @@ Make sure to install the dependencies:
 yarn
 ```
 
-## Nuxt DevTools
-
-Enable the Nuxt DevTools to get access to the Nuxt 3 DevTools in your browser:
+## Nuxt DevTools (Recommended, and enabled by default)
+Enable the Nuxt DevTools:
 ```bash
 npx nuxi@latest devtools enable
 ```
