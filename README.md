@@ -3,9 +3,8 @@
 Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
 
 ## Features
-- [Tailwind CSS](https://tailwindcss.com/)
 - [Nuxtlab-UI](ui.nuxtlabs.com)
-- [color-mode](color-mode.nuxtjs.org)
+- [Tailwind CSS](https://tailwindcss.com/)
 - Auto-Dark Mode powered by [color-mode](color-mode.nuxtjs.org) imported by Nuxtlab-UI
 
 You can easily add more modules to project by using the Nuxt DevTools.
