@@ -1,0 +1,12 @@
+{
+    "recommendations": [
+        "vue.volar",
+        "vue.vscode-typescript-vue-plugin",
+        "willjleong.nuxt-typescript-snippets",
+        "allanoricil.nuxt-vscode-extension",
+        "dbaeumer.vscode-eslint",
+        "redjue.git-commit-plugin",
+        "seatonjiang.gitmoji-vscode",
+        "eamodio.gitlens"
+    ],
+}
