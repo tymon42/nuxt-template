@@ -4,6 +4,9 @@ export default defineNuxtConfig({
     enabled: true,
   },
   modules: ['@nuxthq/ui', '@nuxtjs/color-mode'],
+  colorMode: {
+    classSuffix: '',
+  },
   css: ['~/assets/css/main.css'],
   postcss: {
     plugins: {
@@ -11,5 +14,16 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
-
+  runtimeConfig: {
+    public: {
+      // baseURL: process.env.BASE_URL || 'http://localhost:8888',
+      // baseURL: 'http://localhost:8888',
+      baseURL: process.env.BASE_URL,
+    },
+  },
+  routeRules: {
+    '/api/v1/**': {
+      proxy: { to: `${process.env.BASE_URL}/api/v1/**` },
+    },
+  },
 })
