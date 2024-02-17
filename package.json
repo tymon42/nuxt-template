@@ -14,12 +14,14 @@
     "@commitlint/cli": "^17.6.3",
     "@commitlint/config-conventional": "^17.6.3",
     "@nuxt/devtools": "^0.5.5",
-    "@nuxthq/ui": "^2.7.0",
     "@nuxtjs/color-mode": "^3.2.0",
     "@types/node": "^20.5.4",
+    "@vueuse/core": "^10.7.2",
+    "@vueuse/nuxt": "^10.7.2",
     "autoprefixer": "^10.4.14",
     "commitizen": "^4.3.0",
     "cz-git": "^1.6.1",
+    "daisyui": "^4.7.2",
     "eslint": "^8.41.0",
     "lint-staged": "^13.2.2",
     "nuxt": "^3.5.1",
@@ -27,7 +29,9 @@
     "postcss-custom-properties": "^13.2.0",
     "postcss-html": "^1.5.0",
     "tailwindcss": "^3.3.2",
-    "typescript": "^5.0.4"
+    "typescript": "^5.0.4",
+    "unplugin-auto-import": "^0.17.5",
+    "unplugin-vue-components": "^0.26.0"
   },
   "lint-staged": {
     "*.{js,ts,tsx,jsx}": [
@@ -45,5 +49,11 @@
     "commitizen": {
       "path": "node_modules/cz-git"
     }
+  },
+  "dependencies": {
+    "@css-render/vue3-ssr": "^0.15.12",
+    "@nuxt/ui": "^2.13.0",
+    "naive-ui": "^2.37.3",
+    "vue-sonner": "^1.0.3"
   }
 }
