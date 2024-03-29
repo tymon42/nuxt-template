@@ -7,7 +7,7 @@ Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introdu
 - [Tailwind CSS](https://tailwindcss.com)
 - [NaiveUI](https://daisyui.com)
 - [daisyUI](https://daisyui.com)
-- Icon support with [heroicons](https://heroicons.com), [feathericons](https://feathericons.com), [Boxicons](https://boxicons.com), [css.gg](https://css.gg/app) and [remixicon](https://remixicon.com)
+- Icon support with [heroicons](https://heroicons.com)
 - Toasts with [vue-sonner](https://vue-sonner.vercel.app)
 - Auto-Dark Mode powered by [color-mode](color-mode.nuxtjs.org) imported by Nuxtlab-UI
 
