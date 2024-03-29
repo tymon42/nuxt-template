@@ -1,11 +1,15 @@
 import AutoImport from 'unplugin-auto-import/vite'
-import Components from 'unplugin-vue-components/vite'
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers'
+import Components from 'unplugin-vue-components/vite'
 
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: {
     enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
   },
   build: {
     // transpile: ['vue-sonner'],
@@ -32,8 +36,7 @@ export default defineNuxtConfig({
       }),
     ],
   },
-
-  modules: ['@nuxt/ui', '@vueuse/nuxt', '@nuxtjs/color-mode'],
+  modules: ['@nuxt/ui', '@vueuse/nuxt', '@nuxtjs/color-mode', '@pinia/nuxt', '@pinia-plugin-persistedstate/nuxt', '@formkit/auto-animate/nuxt'],
   colorMode: {
     classSuffix: '',
     preference: 'system', // default theme
@@ -54,9 +57,9 @@ export default defineNuxtConfig({
     },
   },
   routeRules: {
-    '/api/v1/**': {
-      // proxy: { to: 'http://localhost:8888/api/v1/**' },
-      proxy: { to: `${process.env.BASE_URL}/api/v1/**` },
+    '/request/api/**': {
+      proxy: { to: `${process.env.BASE_URL}/api/**` },
+      // proxy: { to: 'http://127.0.0.1:4523/m1/3732090-0-default/api/**' },
     },
   },
   app: {
@@ -66,4 +69,8 @@ export default defineNuxtConfig({
       ],
     },
   },
+  ignore: [
+    '**/*.test.*',
+    '**/script/**',
+  ],
 })

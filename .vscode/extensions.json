@@ -1,12 +1,18 @@
 {
     "recommendations": [
-        "vue.volar",
         "vue.vscode-typescript-vue-plugin",
         "willjleong.nuxt-typescript-snippets",
-        "allanoricil.nuxt-vscode-extension",
         "dbaeumer.vscode-eslint",
         "redjue.git-commit-plugin",
         "seatonjiang.gitmoji-vscode",
-        "eamodio.gitlens"
+        "eamodio.gitlens",
+        "bradlc.vscode-tailwindcss",
+        "standard.vscode-standard",
+        "stylelint.vscode-stylelint",
+        "mohsen1.prettify-json",
+        "xabikos.javascriptsnippets",
+        "heybourn.headwind",
+        "steoates.autoimport",
+        "antfu.iconify"
     ],
 }

@@ -1,9 +1,12 @@
 {
-    "nuxt.isNuxtApp": true,
-    "prettier.enable": false,
-    "editor.formatOnSave": false,
+    "eslint.enable": true,
+    "editor.formatOnSave": true,
     "editor.codeActionsOnSave": {
-        "source.fixAll.eslint": "explicit",
-        "source.organizeImports": "never"
+        "source.fixAll": "explicit",
+        "source.fixAll.eslint": "always",
+        "source.organizeImports": "always"
     },
+    "files.autoSave": "afterDelay",
+    "files.autoSaveDelay": 5000,
+    "prettier.enable": false,
 }

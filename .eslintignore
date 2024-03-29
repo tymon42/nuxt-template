@@ -1,0 +1,12 @@
+node_modules/
+.backup/
+.nuxt/
+.output/
+dist/
+build/
+public/
+
+script/*
+
+tsconfig.json
+.gitignore

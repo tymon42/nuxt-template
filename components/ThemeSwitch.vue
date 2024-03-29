@@ -1,32 +1,45 @@
 <script setup lang="ts">
-type Theme = 'light' | 'dark' | 'system'
-const colorTheme: Ref<Theme> = ref('system')
+import { themeChange } from 'theme-change';
 
-function setColorTheme() {
-  if (colorTheme.value === 'system')
-    colorTheme.value = 'light'
-  else if (colorTheme.value === 'light')
-    colorTheme.value = 'dark'
-  else if (colorTheme.value === 'dark')
-    colorTheme.value = 'system'
+const colorMode = useColorMode()
+const themes = [
+  {
+    icon: 'i-heroicons-computer-desktop',
+    theme: 'system',
+  }, {
+    icon: 'i-heroicons-sun',
+    theme: 'light',
+  }, {
+    icon: 'i-heroicons-moon',
+    theme: 'dark',
+  },
+]
 
-  useColorMode().preference = colorTheme.value
+const currentThemeIcon = computed(() => {
+  return themes.find((item) => item.theme === colorMode.preference)?.icon
+})
+
+function setTheme(name: string) {
+  colorMode.preference = name
 }
+
+onMounted(() => {
+  themeChange(false)
+})
 </script>
 
 <template>
-  <UButton v-if="colorTheme === 'dark'" color="gray" icon="i-heroicons-moon" variant="ghost" @click="setColorTheme()" />
-  <UButton v-if="colorTheme === 'light'" color="gray" icon="i-heroicons-sun" variant="ghost" @click="setColorTheme()" />
-  <UButton v-if="colorTheme === 'system'" color="gray" icon="i-heroicons-computer-desktop" variant="ghost" @click="setColorTheme()" />
+  <div class="dropdown dropdown-end">
+    <button tabindex="0" class="btn btn-sm btn-ghost">
+      <UIcon class="w-6 h-6" :name="currentThemeIcon" dynamic />
+    </button>
+    <ul tabindex="0" class="dropdown-content z-[1] menu p-1 shadow bg-base-100 rounded-box min-w-max space-y-1">
+      <li v-for="item of themes" :key="item.theme">
+        <button class="btn btn-sm min-w-max" @click="setTheme(item.theme)">
+          <UIcon class="w-6 h-6" :name="item.icon" />
+          <!-- {{ item.icon }} {{ item.theme }} -->
+        </button>
+      </li>
+    </ul>
+  </div>
 </template>
-
-<style>
-body {
-  background-color: #fafafa;
-  color: #000000;
-}
-.dark body {
-  background-color: #000000;
-  color: #fafafa;
-}
-</style>

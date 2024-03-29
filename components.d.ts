@@ -7,6 +7,13 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    NCollapse: typeof import('naive-ui')['NCollapse']
+    NCollapseItem: typeof import('naive-ui')['NCollapseItem']
+    NColorPicker: typeof import('naive-ui')['NColorPicker']
+    NConfigProvider: typeof import('naive-ui')['NConfigProvider']
+    NDatePicker: typeof import('naive-ui')['NDatePicker']
+    NNumberAnimation: typeof import('naive-ui')['NNumberAnimation']
+    NQrCode: typeof import('naive-ui')['NQrCode']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

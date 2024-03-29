@@ -44,13 +44,13 @@ const toast = useToast()
 
 <template>
   <UContainer>
+
     <div class="sm:text-center">
-      <UAvatar
-        size="3xl"
+      <UAvatar size="3xl"
         src="https://avatars.githubusercontent.com/u/15265627?s=400&u=d2d9280bdbc5b88bd3573702e5be258dc3c61c2a&v=4"
-        alt="Harry Wong" chip-color="primary" chip-position="top-right"
-      />
+        alt="Harry Wong" chip-color="primary" chip-position="top-right" />
       <br>
+      <ThemeSwitch />
       <UBadge size="lg">
         Fast
       </UBadge>
@@ -80,23 +80,14 @@ const toast = useToast()
       </UDropdown>
       <br>
       <br>
-      <UInput
-        name="input1"
-        loading icon="i-heroicons-magnifying-glass-20-solid" size="xl" color="primary" variant="outline"
-        placeholder="Search..."
-      />
-      <UInput
-        name="input2"
-        icon="i-heroicons-magnifying-glass-20-solid" size="xl" color="primary" variant="outline"
-        placeholder="Search..."
-      />
+      <UInput name="input1" loading icon="i-heroicons-magnifying-glass-20-solid" size="xl" color="primary"
+        variant="outline" placeholder="Search..." />
+      <UInput name="input2" icon="i-heroicons-magnifying-glass-20-solid" size="xl" color="primary" variant="outline"
+        placeholder="Search..." />
       <br>
       <UTextarea name="textarea" color="primary" variant="outline" placeholder="Textarea" />
-      <USelect
-        name="select"
-        size="sm" color="primary" variant="outline" placeholder="Select"
-        :options="['United States', 'Canada', 'Mexico']"
-      />
+      <USelect name="select" size="sm" color="primary" variant="outline" placeholder="Select"
+        :options="['United States', 'Canada', 'Mexico']" />
 
       <USelectMenu v-model="selected" :options="people" />
       <br>
