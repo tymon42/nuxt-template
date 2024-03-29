@@ -17,7 +17,7 @@ You can easily add more modules to project by using the Nuxt DevTools.
 
 Make sure to install the dependencies:
 ```bash
-yarn
+pnpm i
 ```
 
 ## Nuxt DevTools (Recommended, and enabled by default)
@@ -36,19 +36,19 @@ Check out the [Nuxt DevTools documentation](https://devtools.nuxtjs.org/guide) t
 
 Start the development server on `http://localhost:3000`
 ```bash
-yarn dev
+pnpm dev
 ```
 
 ## Production
 Build the application for production:
 
 ```bash
-yarn build
+pnpm build
 ```
 
 Locally preview production build:
 ```bash
-yarn preview
+pnpm preview
 ```
 
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
